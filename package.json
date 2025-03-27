@@ -1,0 +1,62 @@
+{
+
+  "name": "haktan-test-generator",
+
+  "version": "1.0.0",
+
+  "description": "React-admin component test generator CLI",
+
+  "main": "dist/bin/index.js",
+
+  "bin": {
+
+    "haktan-test-generator": "./dist/bin/index.js"
+
+  },
+
+  "scripts": {
+
+    "build": "tsc",
+
+    "start": "node dist/bin/index.js",
+
+    "dev": "ts-node src/index.ts",
+
+    "clean-failed-tests": "ts-node src/clean/cleanFailedTests.ts"
+
+  },
+
+  "keywords": [],
+
+  "author": "haktan",
+
+  "license": "MIT",
+
+  "dependencies": {
+
+    "commander": "^11.1.0",
+
+    "fast-glob": "^3.3.1"
+
+  },
+
+  "devDependencies": {
+
+    "@types/jest": "^27.5.2",
+
+    "@types/node": "^20.11.17",
+
+    "@types/react": "^17.0.68",
+
+    "jest": "^27.5.1",
+
+    "ts-jest": "^27.1.5",
+
+    "ts-node": "^10.9.2",
+
+    "typescript": "^5.3.3"
+
+  }
+
+}
+
