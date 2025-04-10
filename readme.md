@@ -26,6 +26,7 @@ utils.ts dosyası içerisinde projelerde sık kullanılan yapıların mock'ları
  
 Ayrıca
 scripts tag'i içerisine aşağıdaki komut eklenmelidir. Bu komut Jest ile testlerin çalıştırılmasını ve sonar taramalarına yansımasını sağlar
+
 **"test": "jest --coverage --coverageReporters=lcov",**
  
 2- ekli dosyalar test edilecek proje path içerisine eklenir.Bunlar:
@@ -39,11 +40,14 @@ scripts tag'i içerisine aşağıdaki komut eklenmelidir. Bu komut Jest ile test
 **KOMUTLAR**
 
 _proje klasörü içerisinde çalıştırıldığında ts dosyalarıyla aynı dizine snapshot test dosyalarını oluşturur_
+
 **npx haktan-test-generator generate --projectPath ./src**
  
 _proje klasörü içerisine boş bir jest-result.json dosyası oluşturulduktan sonra aşağıdaki komut çalıştırılır. Bu komut test dosyalarını çalıştırır ve hatalı çalışan test dosyalarını işaretler._
+
 **npx jest --json --outputFile=jest-results.json**
  
 _bu komut hatalı çalışan test dosyalarını temizler ve sadece çalışan test dosyalarının projede kalmasını sağlar_
+
 **npx haktan-test-generator clean-broken --projectPath ./src**
  
