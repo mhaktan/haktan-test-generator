@@ -66,7 +66,7 @@ utils.ts dosyası içerisinde projelerde sık kullanılan yapıların mock'ları
 Oluşturulan snapshot testleri hatalı çalışabilir. Alınan hataların çözümü geliştirdiğiniz komponentin kompleksliğine göre değişkenlik gösterir.
 Örneğin parametre alan bir komponent hataya sebebiyet verecektir bu parametreleri test dosyasında manuel geçmeniz gerekir. Veya <form>  ile sarılması gereken bir komponentiniz olabilir bu durumda aşağıdaki gibi bir kullanım sorunu çözecektir.
 
-"<Form onSubmit={() => {}}>{() => <YourComponent /> } </Form>"
+**< Form onSubmit={() => {}}>{() => < YourComponent/> } </ Form>**
 
 
  
