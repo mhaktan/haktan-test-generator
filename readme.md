@@ -64,8 +64,9 @@ _bu komut hatalı çalışan test dosyalarını temizler ve sadece çalışan te
 utils.ts dosyası içerisinde projelerde sık kullanılan yapıların mock'ları eklenmiştir. ihtiyaca göre yeni mock'lar eklebilir. 
 
 Oluşturulan snapshot testleri hatalı çalışabilir. Alınan hataların çözümü geliştirdiğiniz komponentin kompleksliğine göre değişkenlik gösterir.
-Örneğin parametre alan bir komponent hataya sebebiyet verecektir bu parametreleri test dosyasında manuel geçmeniz gerekir. Veya <form>  ile sarılması gereken bir komponentiniz olabilir bu durumda 
+Örneğin parametre alan bir komponent hataya sebebiyet verecektir bu parametreleri test dosyasında manuel geçmeniz gerekir. Veya <form>  ile sarılması gereken bir komponentiniz olabilir bu durumda aşağıdaki gibi bir kullanım sorunu çözecektir.
 
-**<Form onSubmit={() => {}}>{() => <YourComponent /> } </Form>**
-kullanımında hata giderilecek ve test başarılı olacaktır. 
+"<Form onSubmit={() => {}}>{() => <YourComponent /> } </Form>"
+
+
  
