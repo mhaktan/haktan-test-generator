@@ -1,4 +1,5 @@
 **TEST GENERATOR**
+
 utils.ts dosyası içerisinde projelerde sık kullanılan yapıların mock'ları eklenmiştir. ihtiyaca göre yeni mock'lar eklebilir.
  
 **Generator içerisinde yapılacaklar**
@@ -36,6 +37,7 @@ scripts tag'i içerisine aşağıdaki komut eklenmelidir. Bu komut Jest ile test
 - mocks klasörü
  
 **KOMUTLAR**
+
 _proje klasörü içerisinde çalıştırıldığında ts dosyalarıyla aynı dizine snapshot test dosyalarını oluşturur_
 **npx haktan-test-generator generate --projectPath ./src**
  
