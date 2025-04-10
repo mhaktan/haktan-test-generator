@@ -1,6 +1,12 @@
 # TEST GENERATOR CLI
-Bu cli tool'u snapshot testlerini hızlı bir şekilde oluşturmak için geliştirilmiştir. generate --projectPath ./src**
-komutu ile verilen src klasörü altında bulunan .tsx dosyalarını tarar ve aynı isimde aynı dizine test.tsx dosyasını oluşturur.
+
+Bu cli tool'u snapshot testlerini hızlı bir şekilde oluşturmak için geliştirilmiştir.Proje kullanımı 3 adım olarak planlanmıştır.
+
+1-  src klasörü altında bulunan .tsx dosyalarını taranır ve aynı isimde aynı dizine .test.tsx dosyasını oluşturur.
+
+2- oluşturulan test dosyaları çalıştırılır.
+
+3- hatalı çalışan .test.tsx dosyaları projeden temizlenir. 
  
 ## Generator içerisinde yapılacaklar
  
@@ -44,7 +50,7 @@ scripts tag'i içerisine aşağıdaki komut eklenmelidir. Bu komut Jest ile test
 - jest.setup.ts
 - mocks klasörü
  
-**KOMUTLAR**
+## KOMUTLAR
 
 _proje klasörü içerisinde çalıştırıldığında ts dosyalarıyla aynı dizine snapshot test dosyalarını oluşturur_
 
