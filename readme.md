@@ -1,9 +1,6 @@
 # TEST GENERATOR CLI
-Bu cli tool'u snapshot testlerini hızlı bir şekilde oluşturmak için geliştirilmiştir. 
-
-
-
-utils.ts dosyası içerisinde projelerde sık kullanılan yapıların mock'ları eklenmiştir. ihtiyaca göre yeni mock'lar eklebilir.
+Bu cli tool'u snapshot testlerini hızlı bir şekilde oluşturmak için geliştirilmiştir. generate --projectPath ./src**
+komutu ile verilen src klasörü altında bulunan .tsx dosyalarını tarar ve aynı isimde aynı dizine test.tsx dosyasını oluşturur.
  
 ## Generator içerisinde yapılacaklar
  
@@ -60,4 +57,17 @@ _proje klasörü içerisine boş bir jest-result.json dosyası oluşturulduktan 
 _bu komut hatalı çalışan test dosyalarını temizler ve sadece çalışan test dosyalarının projede kalmasını sağlar_
 
 **npx haktan-test-generator clean-broken --projectPath ./src**
+
+
+## Önemli Notlar
+
+utils.ts dosyası içerisinde projelerde sık kullanılan yapıların mock'ları eklenmiştir. ihtiyaca göre yeni mock'lar eklebilir. 
+
+Oluşturulan snapshot testleri hatalı çalışabilir. Alınan hataların çözümü geliştirdiğiniz komponentin kompleksliğine göre değişkenlik gösterir.
+Örneğin parametre alan bir komponent hataya sebebiyet verecektir bu parametreleri test dosyasında manuel geçmeniz gerekir. Veya <form>  ile sarılması gereken bir komponentiniz olabilir bu durumda 
+
+**<Form onSubmit={() => {}}>
+{() => <YourComponent />}
+</Form>**
+kullanımında hata giderilecek ve test başarılı olacaktır. 
  
