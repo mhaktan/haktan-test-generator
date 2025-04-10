@@ -5,13 +5,18 @@ utils.ts dosyası içerisinde projelerde sık kullanılan yapıların mock'ları
 **Generator içerisinde yapılacaklar**
  
 - bağımlılıkları yükle
+
   **npm install --legacy-peer-deps**
+
 - Projeyi derle dist klasörü oluşmalı
+
   **npm run build**
+
 - globalde kullanabilmek için paketi link'le
+
   **npm link**
  
- 
+
 **Testi yazılacak proje için yapılacaklar.**
 
 1- package.json'da devDependencies içerisinde aşağıdaki paketlerin eklenmesi gerekmektedir. Sonrasında standart npm install komutu ile bu paketlerin kurulumu sağlanır.
