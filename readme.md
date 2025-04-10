@@ -5,7 +5,7 @@ Bu cli tool'u snapshot testlerini hızlı bir şekilde oluşturmak için gelişt
 
 utils.ts dosyası içerisinde projelerde sık kullanılan yapıların mock'ları eklenmiştir. ihtiyaca göre yeni mock'lar eklebilir.
  
-**Generator içerisinde yapılacaklar**
+## Generator içerisinde yapılacaklar
  
 - bağımlılıkları yükle
 
@@ -20,7 +20,7 @@ utils.ts dosyası içerisinde projelerde sık kullanılan yapıların mock'ları
   **npm link**
  
 
-**Testi yazılacak proje için yapılacaklar.**
+## Testi yazılacak proje için yapılacaklar.
 
 1- package.json'da devDependencies içerisinde aşağıdaki paketlerin eklenmesi gerekmektedir. Sonrasında standart npm install komutu ile bu paketlerin kurulumu sağlanır.
  
