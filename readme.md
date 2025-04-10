@@ -1,4 +1,7 @@
-**TEST GENERATOR**
+# TEST GENERATOR CLI
+Bu cli tool'u snapshot testlerini hızlı bir şekilde oluşturmak için geliştirilmiştir. 
+
+
 
 utils.ts dosyası içerisinde projelerde sık kullanılan yapıların mock'ları eklenmiştir. ihtiyaca göre yeni mock'lar eklebilir.
  
@@ -8,7 +11,7 @@ utils.ts dosyası içerisinde projelerde sık kullanılan yapıların mock'ları
 
   **npm install --legacy-peer-deps**
 
-- Projeyi derle dist klasörü oluşmalı
+- Projeyi derle (dist klasörü oluşmalı)
 
   **npm run build**
 
@@ -36,7 +39,7 @@ scripts tag'i içerisine aşağıdaki komut eklenmelidir. Bu komut Jest ile test
 
 **"test": "jest --coverage --coverageReporters=lcov",**
  
-2- ekli dosyalar test edilecek proje path içerisine eklenir.Bunlar:
+2- ekli dosyalar test edilecek proje path içerisine eklenir.Bu dosyalar:
  
 - test-config klasörü
 - babel.config.js
