@@ -42,13 +42,14 @@ scripts tag'i içerisine aşağıdaki komut eklenmelidir. Bu komut Jest ile test
 
 **"test": "jest --coverage --coverageReporters=lcov",**
  
-2- ekli dosyalar test edilecek proje path içerisine eklenir.Bu dosyalar:
+2- ProjeyeEklenecekDosyalar klasörü içerisindeki dosyalar test edilecek proje path içerisine eklenir.Bu dosyalar:
  
 - test-config klasörü
 - babel.config.js
 - jest.config.js
 - jest.setup.ts
 - mocks klasörü
+- jest-results.json
  
 ## KOMUTLAR
 
