@@ -176,6 +176,7 @@ jest.mock("react-router-dom", () => ({
   }),
  
 }));
+try{
 jest.mock("lodash", () => ({
   pick: jest.fn((obj, keys) => {
     const result = {};
@@ -186,22 +187,31 @@ jest.mock("lodash", () => ({
   }),
   map: jest.fn((arr, fn) => arr.map(fn)),
 }));
+}
+catch(err){}
+try{
 jest.mock("papaparse", () => ({
   unparse: jest.fn(() => "csv-data"),
   parse: jest.fn(() => ({ data: [["parsed"]] })),
 }));
- 
+}
+catch(err) {}
+ try{
 jest.mock("file-saver", () => ({
   saveAs: jest.fn(),
 }));
+}
+catch(err){}
  
+try{
 jest.mock("xlsx", () => ({
   utils: {
     json_to_sheet: jest.fn(() => ({})),
   },
   write: jest.fn(() => []),
 }));
- 
+}
+catch (err) {}
 const _dataProvider = useDataProvider();
  
 const theme = createTheme();
