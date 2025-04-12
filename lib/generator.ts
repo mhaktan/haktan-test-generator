@@ -1,40 +1,40 @@
 import fs from "fs";
-
+ 
 import path from "path";
-
+ 
 import { parseComponentName, createSnapshotTestContent } from "../src/utils";
-
+ 
 export async function generateSnapshotTest(componentPath: string) {
-  // ❗️test dosyasıysa hiç işleme alma
-
+  const componentName = parseComponentName(componentPath);
+ 
+  const dirName = path.dirname(componentPath);
+ 
+  // Eğer bu dosya zaten bir test dosyasıysa veya test dosyası varsa, atla
+ 
   if (componentPath.endsWith(".test.tsx")) {
-    console.log(`⚠️  Skipped (file is already a test): ${componentPath}`);
-
+    console.log(`ℹ️  Skipped (already a test file): ${componentPath}`);
+ 
     return;
   }
-
-  const componentName = parseComponentName(componentPath);
-
-  const dirName = path.dirname(componentPath);
-
+ 
   const testFilePath = path.join(dirName, `${componentName}.test.tsx`);
-
-  // Zaten test dosyası varsa geç
-
+ 
   if (fs.existsSync(testFilePath)) {
     console.log(`ℹ️  Skipped (already exists): ${testFilePath}`);
-
+ 
     return;
   }
-
-  const relativeImport = "./" + path.basename(componentPath);
-
-  const content = createSnapshotTestContent(componentName, relativeImport);
-
+ 
+  // Doğru import için sadece dosya adını al, uzantı olmadan
+ 
+  const importPath = "./" + path.basename(componentPath, ".tsx");
+ 
+  const content = createSnapshotTestContent(componentName, importPath);
+ 
   try {
     fs.writeFileSync(testFilePath, content);
-
-    console.log(`✅ Success Created: ${testFilePath}`);
+ 
+    console.log(`✅ Created: ${testFilePath}`);
   } catch (error) {
     if ((error as NodeJS.ErrnoException).code === "EEXIST") {
       console.warn(`⚠️ File already exists: ${testFilePath}`);
