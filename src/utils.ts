@@ -26,7 +26,7 @@ import { waitFor } from "@testing-library/react";
 import ${componentName} from "${sanitizedImportPath}";
  
 // Mocks
- 
+
 jest.mock("@airborne/react-admin", () => ({
 Can: ({ children }) => <>{children}</>,
   useMinio: () => ({
@@ -48,7 +48,7 @@ Can: ({ children }) => <>{children}</>,
       isCustomer: false,
  
       employeeId: "12345",
- 
+      can:(perm:string)=>true
     },
  
   }),
